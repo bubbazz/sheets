@@ -1,0 +1,5 @@
+<div class="input-group mb-3">
+    <select [(ngModel)]="selection" class="form-select form-select-sm" (change)="update()">
+        <option *ngFor="let item of constlist" [value]="item">{{item}}</option>
+    </select>
+</div>

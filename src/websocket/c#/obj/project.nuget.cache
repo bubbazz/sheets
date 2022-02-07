@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OhSSQOPt/HTI572UX9giNcKQ94oCVrEcN51KSFgl2NA6LFFviUM1dzb716C7qThs1bFe0BcVOxvZgLc/P10DeA==",
+  "success": true,
+  "projectFilePath": "/home/bubbazz/Documents/work/Website/sheets/src/websocket/c#/c#.csproj",
+  "expectedPackageFiles": [
+    "/home/bubbazz/.nuget/packages/fleck/1.2.0/fleck.1.2.0.nupkg.sha512",
+    "/home/bubbazz/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

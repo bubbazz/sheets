@@ -1,0 +1,1 @@
+[{"name": "Hdlr_Bemerkung", "input": "Zeit : \u00a71\u00a7.01.\u00a72\u00a7", "series": [{"type": "const", "key": "Last Day (Month)", "value": 31}, {"type": "const", "key": "Year", "value": 2022}]}, {"name": "Hdlr_Name", "input": "\u00a71\u00a7 \u00a72\u00a7", "series": [{"type": "sheet", "key": "", "value": {}}, {"type": "sheet", "key": "", "value": {}}]}]

@@ -1,0 +1,38 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend" for="inputgroupseries">
+        <label class="input-group-text">Sheet</label>
+    </div>
+    <input style="display:none;" #fileinput type="file" class="form-control-file" id="inputGroupFile03"
+        aria-describedby="inputGroupFileAddon03" (change)="changeFile(fileinput.files)">
+    <label class="form-control" for="inputGroupFile03">{{filename}}</label>
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03"
+            (click)="sendData(fileinput.files)">Upload</button>
+    </div>
+</div>
+<div>
+    <div class="add">
+        <h2>add Series</h2>
+        <input type="button" value="+" class="btn btn-primary btn-lg" (click)="addSeries()">
+    </div>
+    <ul class="list-group">
+        <ng-container *ngFor="let item of SeriesQue; index as i">
+            <li class="list-group-item">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend" for="inputgroupseries">
+                        <label class="input-group-text">Series</label>
+                    </div>
+                    <select [(ngModel)]="SeriesQue[i].name" class="form-select form-select-sm" id="inputgroupseries">
+                        <option *ngFor="let item of excon_lst" [value]="item">{{item}}</option>
+                    </select>
+                </div>
+                <app-work-series [mandant-sheet-select]="mandant_lst" [series]="SeriesQue[i].series"
+                    [(input)]="SeriesQue[i].input"></app-work-series>
+            </li>
+        </ng-container>
+    </ul>
+</div>
+
+<!--
+<p *ngFor="let item of ">{{item.data}}</p> <input type="button" value="test" (click)="saveFormat()">
+-->

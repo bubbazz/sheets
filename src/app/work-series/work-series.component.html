@@ -1,0 +1,20 @@
+<div class="add">
+
+
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <input type="button" class="btn btn-outline-primary" value="+ Sheet" (click)="addCopyFromSheet()">
+        <input type="button" class="btn btn-outline-primary" value="+ Constant" (click)="addCopyFromConst()">
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="input" (change)="update()">
+</div>
+<div>
+
+    <ng-container *ngFor="let item of workingQue;index as i;">
+        <app-copy-const *ngIf="item.type === 'const'" [(selection)]="item.key" (selected)="changeConst($event,i)">
+        </app-copy-const>
+        <app-copy-from *ngIf="item.type === 'sheet'" [mandant-sheet-select]="mandantsheet" [(selection)]="item.key">
+        </app-copy-from>
+    </ng-container>
+</div>

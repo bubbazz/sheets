@@ -1,0 +1,24 @@
+<label for="file">file : </label>
+<input type="file" #fileinput>
+<input type="button" value="Mandanten Liste" (click)="sendData(fileinput.files)"> <br><br>
+<div class="copyconst">
+    <div class="addbar">
+        <h2>Copy from Constant to Excon</h2>
+        <input type="button" value="+" (click)="addCopyFromConst()">
+    </div>
+    <app-copy-const *ngFor="let item of constant_list_values" [excon-sheet-select]="excon_lst"
+        (returnVal)="changeConst($event,item.id)">
+    </app-copy-const>
+</div>
+
+<div>
+    <div class="addbar">
+        <h2>Copy from Mandant to Excon</h2>
+        <input type="button" value="+" (click)="addCopyFromSheet()">
+    </div>
+    <app-copy-from *ngFor="let item of mandant_list_values" [mandant-sheet-select]="mandant_lst"
+        [excon-sheet-select]="excon_lst">
+    </app-copy-from>
+</div>
+
+<p *ngFor="let item of constant_list_values">{{item.data}}</p> <input type="button" value="test" (click)="saveFormat()">

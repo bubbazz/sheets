@@ -1,0 +1,25 @@
+<div class="input-group">
+    <input [(ngModel)]="this.input" type="text" list="saveFiles" class="form-control">
+    <datalist id="saveFiles">
+        <option *ngFor="let item of json_lst">{{item}}</option>
+    </datalist>
+    <div class="input-group-append" id="button-addon4">
+        <input class="btn btn-outline-primary" type="button" value="Save" (click)="saveFormat()">
+        <input class="btn btn-outline-primary" type="button" value="Load" (click)="loadFormat()">
+    </div>
+</div>
+<div style="display: flex; padding:7px;">
+    <ng-container *ngFor="let item of SheetsQue;index as i">
+        <button class="btn btn-lg" [ngClass]="item.series === selectedSeries?'btn-primary':'btn-outline-primary'"
+            (click)="updateSheet(i)" style="margin-right: 5px;">{{item.name}}
+        </button>
+    </ng-container>
+    <input type="button" class="btn btn-primary btn-lg" value="+" (click)="addSheet()">
+</div>
+<ng-container *ngIf="selectedSeries != undefined">
+    <app-sheet [mandant_lst]="mandant_lst" [excon_lst]="excon_lst" [sheet]="selectedSeries"></app-sheet>
+</ng-container>
+
+
+<input type="button" value="log" (click)="logMe()"><input type="button" value="create" class="btn btn-primary btn-lg"
+    (click)="create()">

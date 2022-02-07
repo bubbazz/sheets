@@ -1,0 +1,11 @@
+<div class="input-group mb-3">
+    <select [(ngModel)]="selection" class="form-select form-select-sm" (change)="update()"
+        [ngClass]="error.is?'error':''">
+        <option *ngFor="let item of tmp" [value]="item">{{item}}</option>
+    </select>
+    <select class="form-select form-select-sm">
+        <option value="substring">substring</option>
+        <option value="ab zeichen">ab zeichen</option>
+        <option value="alles groß">alles groß</option>
+    </select>
+</div>

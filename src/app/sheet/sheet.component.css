@@ -1,0 +1,8 @@
+.add {
+    display:flex;
+    padding: 5px;
+    margin: 5px;
+}
+.add input{
+    margin-left: auto;
+}
